@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+    <h1 class="page-title">Add New Note</h1>
+    <div class="form-container">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.content.label }}
+                {{ form.content(class="form-control", rows="5") }}
+            </div>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-primary") }}
+            </div>
+        </form>
+    </div>
+{% endblock %}
